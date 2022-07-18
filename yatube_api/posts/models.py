@@ -45,6 +45,9 @@ class Comment(models.Model):
         'Дата добавления', auto_now_add=True, db_index=True
     )
 
+    def __str__(self):
+        return self.author
+
 
 class Follow(models.Model):
     following = models.ForeignKey(
@@ -52,8 +55,5 @@ class Follow(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='user')
 
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(fields=['user', 'following'],
-                                    name='unique_name_follow')
-        ]
+    def __str__(self):
+        return self.following
