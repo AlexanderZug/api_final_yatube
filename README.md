@@ -6,7 +6,6 @@ API дает возможность - в зависимости от прав д
 ![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![](https://img.shields.io/badge/django%20rest-ff1709?style=for-the-badge&logo=django&logoColor=white)
 ![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
-![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 
 ## Запуск проекта
 
@@ -21,7 +20,7 @@ git clone https://github.com/AlexanderZug/api_final_yatube.git
 ```
 cd api_final_yatube
 ```
-Создайте и активируйте вирутальное окружение:
+Создайте и активируйте виртуальное окружение:
 ```
 python3 -m venv venv
 ```
@@ -36,7 +35,7 @@ pip3 install -r requirements.txt
 ```
 python3 manage.py migrate
 ```
-Запуситете проект:
+Запустите проект:
 ```
 python3 manage.py runserver
 ```
@@ -47,3 +46,13 @@ http://127.0.0.1:8000/redoc/
 ```
 
 > документация будет доступна после запуска проекта
+<br>
+
+> примеры некоторых возможных запросов:
+
+> GET | POST /api/v1/posts/ - получить список всех публикаций или создать новый пост
+
+> GET api/v1/groups/ - получить список всех групп
+
+> GET | PUT | PATCH | DELETE api/v1/posts/{post_id}/comments/{comment_id}/ - получить, отредактировать или удалить комментарии
+
